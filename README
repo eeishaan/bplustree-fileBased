@@ -1,0 +1,50 @@
+NOTE: The Program uses c++11 std. of c++, so kindly test it on a compatible machine and compiler
+
+USAGE
+---------------------------------
+Command : bash run.bash FLAGS
+Flags:
+1. '0' - Results in reindexing the whole index.
+2. '1' - Run the operations written in 'querysample.txt'
+
+ex: bash run.bash 0
+
+OUTPUT
+---------------------------------
+Stats are printed at the end of the output. Recommend : Use '>' to append to file and then analyze
+
+
+CLEANING
+---------------------------------
+Use bash clean.bash to delete the index.
+
+
+RESULT (with n=32)
+---------------------------------
+***INSERT OPERATION***
+MIN TIME: 0ms
+MAX TIME : 110ms
+TOTAL TIME : 524ms
+AVERAGE TIME : 0ms
+STANDARD DEVIATION : 4ms
+
+***POINT OPERATION***
+MIN TIME: 0ms
+MAX TIME : 1ms
+TOTAL TIME : 121ms
+AVERAGE TIME : 0ms
+STANDARD DEVIATION : 0ms
+
+***RANGE OPERATION***
+MIN TIME: 0ms
+MAX TIME : 380ms
+TOTAL TIME : 116046ms
+AVERAGE TIME : 116ms
+STANDARD DEVIATION : 76.1577ms
+
+
+CONCLUSION:
+---------------------------------
+1. B+ tree implementation is not good for range queries as they take a lot of time.
+2. INSERT and Point Operations take constant time.
+3. Range query's time deviates the most as the number of operations is not fixed.
